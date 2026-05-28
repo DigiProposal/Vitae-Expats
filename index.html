@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vitae Health Services — Concierge Membership for Expat Retirees in Panama</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --verde: #28B67A;
+    --verde-dark: #1F9264;
+    --verde-light: #E8F7F1;
+    --azul: #005F9B;
+    --azul-dark: #004471;
+    --azul-light: #E5F0F7;
+    --gris: #757679;
+    --gris-light: #F5F5F6;
+    --gris-border: #E0E0E2;
+    --gris-text: #4A4B4D;
+    --white: #FFFFFF;
+    --black: #1A1A1A;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    background: #F0F0F2;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 0;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-dark) 100%);
+    color: var(--white);
+    padding: 48px 56px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border: 60px solid rgba(40, 182, 122, 0.15);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -60px;
+    width: 240px; height: 240px;
+    border: 40px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+  }
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-mark {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .logo-mark .chevron {
+    width: 0; height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 14px solid var(--verde);
+  }
+  .logo-mark .chevron-2 {
+    border-bottom-color: var(--white);
+    margin-top: -4px;
+  }
+  .logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  .logo-text small {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    color: var(--verde);
+    text-transform: uppercase;
+  }
+  .badge-hero {
+    background: var(--verde);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 24px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+  .hero-title em {
+    color: var(--verde);
+    font-style: normal;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 680px;
+    color: rgba(255,255,255,0.92);
+    position: relative;
+    z-index: 2;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+    z-index: 2;
+  }
+  .stat .num {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--verde);
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  .stat .lbl {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 6px;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 44px 56px;
+  }
+  .section-tag {
+    display: inline-block;
+    background: var(--verde-light);
+    color: var(--verde-dark);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+    color: var(--black);
+    line-height: 1.15;
+  }
+  .section-subtitle {
+    font-size: 15px;
+    color: var(--gris-text);
+    margin-bottom: 28px;
+    max-width: 800px;
+    font-weight: 400;
+  }
+
+  /* WHY VITAE */
+  .why-vitae {
+    background: var(--gris-light);
+    padding: 44px 56px;
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+  .pillar {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 14px;
+    border-left: 4px solid var(--verde);
+  }
+  .pillar.azul { border-left-color: var(--azul); }
+  .pillar-icon {
+    width: 44px; height: 44px;
+    background: var(--verde-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    color: var(--verde-dark);
+  }
+  .pillar.azul .pillar-icon {
+    background: var(--azul-light);
+    color: var(--azul);
+  }
+  .pillar h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .pillar p {
+    font-size: 13px;
+    color: var(--gris-text);
+    line-height: 1.55;
+  }
+
+  /* PLANS */
+  .plans-intro {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .plan {
+    background: var(--white);
+    border: 1.5px solid var(--gris-border);
+    border-radius: 18px;
+    padding: 28px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .plan.featured {
+    border: 2.5px solid var(--verde);
+    transform: translateY(-12px);
+    box-shadow: 0 16px 40px rgba(40, 182, 122, 0.18);
+  }
+  .plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--verde);
+    color: var(--white);
+    padding: 6px 18px;
+    border-radius: 14px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .plan-name {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gris);
+    margin-bottom: 8px;
+  }
+  .plan-tier {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 4px;
+    letter-spacing: -0.8px;
+  }
+  .plan.featured .plan-tier { color: var(--verde-dark); }
+  .plan-tagline {
+    font-size: 12px;
+    color: var(--gris-text);
+    margin-bottom: 18px;
+    line-height: 1.5;
+    min-height: 36px;
+  }
+  .plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 14px 0 10px;
+    border-top: 1px solid var(--gris-border);
+  }
+  .plan-price .usd {
+    font-size: 14px;
+    color: var(--gris);
+    font-weight: 500;
+  }
+  .plan-price .amount {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1;
+    letter-spacing: -1.5px;
+  }
+  .plan-price .month {
+    font-size: 13px;
+    color: var(--gris);
+    font-weight: 400;
+  }
+  .plan-annual {
+    font-size: 11px;
+    color: var(--verde-dark);
+    font-weight: 500;
+    background: var(--verde-light);
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .plan-couple {
+    background: var(--azul-light);
+    color: var(--azul-dark);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    border-left: 3px solid var(--azul);
+  }
+  .plan-couple strong { font-weight: 600; }
+  .plan-features {
+    list-style: none;
+    flex-grow: 1;
+  }
+  .plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 0;
+    font-size: 12.5px;
+    color: var(--gris-text);
+    line-height: 1.45;
+    border-bottom: 1px dashed var(--gris-border);
+  }
+  .plan-features li:last-child { border-bottom: none; }
+  .plan-features li .check {
+    color: var(--verde);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 13px;
+  }
+  .plan-features li strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+  .plan-features li .sub {
+    display: block;
+    font-size: 11px;
+    color: var(--gris);
+    margin-top: 2px;
+    font-weight: 400;
+  }
+  .plan-cta {
+    margin-top: 16px;
+    padding: 11px;
+    text-align: center;
+    background: var(--azul);
+    color: var(--white);
+    border-radius: 10px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .plan.featured .plan-cta { background: var(--verde); }
+
+  /* LAB DETAIL BOX */
+  .lab-detail {
+    background: var(--gris-light);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+  .lab-detail h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 14px;
+    letter-spacing: -0.2px;
+  }
+  .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .lab-card {
+    background: var(--white);
+    padding: 16px;
+    border-radius: 10px;
+    border-top: 3px solid var(--azul);
+  }
+  .lab-card.standard { border-top-color: var(--verde); }
+  .lab-card.premium { border-top-color: var(--azul-dark); }
+  .lab-card h5 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gris);
+    margin-bottom: 6px;
+  }
+  .lab-card .panel-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+  .lab-card p {
+    font-size: 11.5px;
+    color: var(--gris-text);
+    line-height: 1.5;
+  }
+  .lab-card .plus {
+    color: var(--verde-dark);
+    font-weight: 600;
+  }
+
+  /* TECH SECTION */
+  .tech {
+    background: var(--azul);
+    color: var(--white);
+    padding: 44px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .tech::before {
+    content: '';
+    position: absolute;
+    top: 40px; right: -30px;
+    width: 180px; height: 180px;
+    border: 30px solid rgba(40, 182, 122, 0.18);
+    border-radius: 50%;
+  }
+  .tech .section-tag {
+    background: rgba(40, 182, 122, 0.2);
+    color: var(--verde);
+  }
+  .tech .section-title { color: var(--white); }
+  .tech .section-subtitle { color: rgba(255,255,255,0.85); }
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 2;
+  }
+  .tech-item {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 18px;
+    border-radius: 12px;
+  }
+  .tech-icon {
+    width: 36px; height: 36px;
+    background: var(--verde);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .tech-item h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--white);
+  }
+  .tech-item p {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.5;
+  }
+
+  /* SERVICE LINES (Beyond Primary Care) */
+  .lines {
+    padding: 44px 56px;
+    background: var(--white);
+  }
+  .lines-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .line-card {
+    background: var(--white);
+    border: 1px solid var(--gris-border);
+    border-radius: 12px;
+    padding: 18px 14px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .line-card .line-icon {
+    width: 48px; height: 48px;
+    background: var(--azul-light);
+    border-radius: 12px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul);
+  }
+  .line-card.featured .line-icon {
+    background: var(--verde-light);
+    color: var(--verde-dark);
+  }
+  .line-card h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 4px;
+    letter-spacing: -0.2px;
+  }
+  .line-card .tag {
+    font-size: 9.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--verde-dark);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .line-card p {
+    font-size: 11px;
+    color: var(--gris-text);
+    line-height: 1.45;
+  }
+  .line-card .rate {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 10px;
+    background: var(--verde-light);
+    color: var(--verde-dark);
+    border-radius: 12px;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .escalation-flow {
+    background: var(--verde-light);
+    padding: 22px 28px;
+    border-radius: 14px;
+    border-left: 4px solid var(--verde);
+    margin-top: 24px;
+  }
+  .escalation-flow h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--verde-dark);
+    margin-bottom: 12px;
+  }
+  .escalation-flow p {
+    font-size: 13px;
+    color: var(--gris-text);
+    line-height: 1.55;
+  }
+
+  /* INSURANCE */
+  .insurance {
+    background: var(--gris-light);
+    padding: 32px 56px;
+  }
+  .insurance-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .insurance-text { flex: 1; }
+  .insurance-text h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--black);
+  }
+  .insurance-text p {
+    font-size: 13px;
+    color: var(--gris-text);
+    line-height: 1.55;
+  }
+  .insurance-list {
+    flex: 1.2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .insurance-list .ins-tag {
+    background: var(--white);
+    border: 1px solid var(--gris-border);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--azul-dark);
+  }
+  .insurance-list .ins-tag.more {
+    background: var(--verde);
+    color: var(--white);
+    border-color: var(--verde);
+    font-weight: 600;
+  }
+
+  /* VALUE */
+  .value {
+    background: var(--white);
+    padding: 44px 56px;
+  }
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .value-card {
+    background: var(--gris-light);
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .value-card .big {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--verde-dark);
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  .value-card h5 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .value-card p {
+    font-size: 12px;
+    color: var(--gris-text);
+    line-height: 1.4;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--azul-dark);
+    color: var(--white);
+    padding: 32px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .footer-left h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.5px;
+  }
+  .footer-left p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+  }
+  .footer-right {
+    text-align: right;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+  }
+  .footer-contact a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+  .footer-contact span {
+    color: var(--verde);
+    font-weight: 600;
+  }
+  .footer-disclaimer {
+    background: var(--azul-dark);
+    color: rgba(255,255,255,0.5);
+    padding: 14px 56px;
+    font-size: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; }
+    .section, .why-vitae, .tech, .lines, .insurance, .value { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-top">
+      <div class="logo">
+        <div class="logo-mark">
+          <div class="chevron"></div>
+          <div class="chevron chevron-2"></div>
+        </div>
+        <div class="logo-text">vitae<small>Health Services</small></div>
+      </div>
+      <div class="badge-hero">Concierge Membership · Coastal Panama</div>
+    </div>
+    <h1 class="hero-title">Your bilingual <em>house-call</em> medical team, designed for North American retirees on Panama's Pacific Coast.</h1>
+    <p class="hero-subtitle">Primary care, continuous monitoring, and direct clinical response — right in your home. From Coronado to Río Hato. No waiting rooms. No two-hour drives. No language barriers.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">+15,000</div><div class="lbl">Patients served</div></div>
+      <div class="stat"><div class="num">98%</div><div class="lbl">NPS satisfaction</div></div>
+      <div class="stat"><div class="num">24/7</div><div class="lbl">Clinical coverage</div></div>
+      <div class="stat"><div class="num">+28</div><div class="lbl">Insurance partners</div></div>
+    </div>
+  </section>
+
+  <!-- WHY VITAE -->
+  <section class="why-vitae">
+    <span class="section-tag">Why Vitae</span>
+    <h2 class="section-title">A trusted clinical partner, not just another provider</h2>
+    <p class="section-subtitle">Vitae Health Services is Panama's leading home healthcare network. We operate as the clinical partner of major international insurers — PALIG, MAPFRE, BUPA, VUMI and more than 28 carriers — and we manage complex cases traditionally limited to hospital settings.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+        </div>
+        <h4>Human, bilingual care</h4>
+        <p>Full clinical team certified to attend international patients in English, with the warmth and personal touch that defines Vitae.</p>
+      </div>
+      <div class="pillar azul">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h2l2-7 4 14 4-10 2 3h6"/></svg>
+        </div>
+        <h4>Hospital-grade capability</h4>
+        <p>Five integrated Vitae service lines — from primary care monitoring to full hospital-at-home — all delivered by the same trusted team.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h4>Technology & 360° coordination</h4>
+        <p>Patient Monitoring Center, Digital Home Health Platform, and Clinic 360 App orchestrate every visit, lab and note in real time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="section">
+    <div class="plans-intro">
+      <span class="section-tag">Membership plans</span>
+      <h2 class="section-title">Choose the plan that fits your life</h2>
+      <p class="section-subtitle" style="margin: 0 auto;">Monthly direct-pay membership. No insurance paperwork required. Territorial coverage from Coronado to Farallón–Río Hato.</p>
+    </div>
+
+    <div class="plans">
+
+      <!-- BASIC -->
+      <div class="plan">
+        <div class="plan-name">Plan Basic</div>
+        <div class="plan-tier">Essential Care</div>
+        <p class="plan-tagline">For the active, healthy retiree who wants close, dependable medical backup.</p>
+        <div class="plan-price">
+          <span class="usd">$</span>
+          <span class="amount">120</span>
+          <span class="month">/ month · individual</span>
+        </div>
+        <span class="plan-annual">Annual: $1,296 (10% off)</span>
+        <div class="plan-couple"><strong>Couples:</strong> Add your spouse and receive an additional <strong>10% off</strong> on both memberships.</div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span><span><strong>6 home physician visits per year</strong><span class="sub">General medical visit at your home</span></span></li>
+          <li><span class="check">✓</span><span><strong>6 home nursing visits per year</strong><span class="sub">Vital signs, health education, on-the-spot assessments</span></span></li>
+          <li><span class="check">✓</span><span><strong>1 Basic Lab Panel per year</strong><span class="sub">Sample collected at home</span></span></li>
+          <li><span class="check">✓</span><span><strong>Bilingual care coordination line</strong><span class="sub">English-speaking team for scheduling and follow-up</span></span></li>
+          <li><span class="check">✓</span><span><strong>Special member rates</strong><span class="sub">Discounted access to all other Vitae service lines</span></span></li>
+          <li><span class="check">✓</span><span><strong>On-request family reports</strong><span class="sub">Updates to relatives in the U.S. or Canada</span></span></li>
+        </ul>
+        <div class="plan-cta">Ideal: ages 60–75, independent and healthy</div>
+      </div>
+
+      <!-- STANDARD - FEATURED -->
+      <div class="plan featured">
+        <div class="plan-badge">Most popular</div>
+        <div class="plan-name">Plan Standard</div>
+        <div class="plan-tier">Comprehensive Care</div>
+        <p class="plan-tagline">For retirees who want proactive monitoring of chronic conditions with regular medical follow-up.</p>
+        <div class="plan-price">
+          <span class="usd">$</span>
+          <span class="amount">250</span>
+          <span class="month">/ month · individual</span>
+        </div>
+        <span class="plan-annual">Annual: $2,700 (10% off)</span>
+        <div class="plan-couple"><strong>Couples:</strong> Add your spouse and receive an additional <strong>10% off</strong> on both memberships.</div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span><span><strong>12 home physician visits per year</strong><span class="sub">Monthly general medical visit</span></span></li>
+          <li><span class="check">✓</span><span><strong>6 home nursing visits per year</strong><span class="sub">Vital signs, follow-up, clinical assessments</span></span></li>
+          <li><span class="check">✓</span><span><strong>1 Geriatric assessment per year</strong><span class="sub">Comprehensive evaluation by geriatrician</span></span></li>
+          <li><span class="check">✓</span><span><strong>1 Extended Lab Panel per year</strong><span class="sub">Sample collected at home</span></span></li>
+          <li><span class="check">✓</span><span><strong>Coordination with your primary doctor</strong><span class="sub">In Panama, the U.S. or Canada</span></span></li>
+          <li><span class="check">✓</span><span><strong>Special member rates</strong><span class="sub">Discounted access to all other Vitae service lines</span></span></li>
+          <li><span class="check">✓</span><span><strong>Semiannual clinical report</strong><span class="sub">Shared with family on request</span></span></li>
+        </ul>
+        <div class="plan-cta">Ideal: ages 65–80, managing chronic conditions</div>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="plan">
+        <div class="plan-name">Plan Premium</div>
+        <div class="plan-tier">Concierge Care</div>
+        <p class="plan-tagline">Maximum peace of mind. For complex patients or those wanting intensive monthly monitoring.</p>
+        <div class="plan-price">
+          <span class="usd">$</span>
+          <span class="amount">350</span>
+          <span class="month">/ month · individual</span>
+        </div>
+        <span class="plan-annual">Annual: $3,780 (10% off)</span>
+        <div class="plan-couple"><strong>Couples:</strong> Add your spouse and receive an additional <strong>10% off</strong> on both memberships.</div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span><span><strong>12 home physician visits per year</strong><span class="sub">Monthly general medical visit</span></span></li>
+          <li><span class="check">✓</span><span><strong>12 home nursing visits per year</strong><span class="sub">Monthly clinical assessment</span></span></li>
+          <li><span class="check">✓</span><span><strong>2 Geriatric assessments per year</strong><span class="sub">Biannual comprehensive evaluation</span></span></li>
+          <li><span class="check">✓</span><span><strong>1 Complete Lab Panel per year</strong><span class="sub">Advanced markers, sample at home</span></span></li>
+          <li><span class="check">✓</span><span><strong>1 EKG at home per year</strong><span class="sub">Cardiac baseline and follow-up</span></span></li>
+          <li><span class="check">✓</span><span><strong>Priority coordination with your primary doctor</strong><span class="sub">In Panama, the U.S. or Canada</span></span></li>
+          <li><span class="check">✓</span><span><strong>Priority special member rates</strong><span class="sub">Best discounts and priority response across all Vitae service lines</span></span></li>
+        </ul>
+        <div class="plan-cta">Ideal: ages 75+, active chronic condition</div>
+      </div>
+
+    </div>
+
+    <!-- LAB DETAIL -->
+    <div class="lab-detail">
+      <h4>What's included in each lab panel</h4>
+      <div class="lab-grid">
+        <div class="lab-card">
+          <h5>Plan Basic</h5>
+          <div class="panel-name">Basic Lab Panel</div>
+          <p>Lipid profile, complete blood count (CBC), basic chemistry, electrolytes.</p>
+        </div>
+        <div class="lab-card standard">
+          <h5>Plan Standard</h5>
+          <div class="panel-name">Extended Lab Panel</div>
+          <p>Everything in Basic <span class="plus">+ liver function, vitamin B12, HbA1c.</span></p>
+        </div>
+        <div class="lab-card premium">
+          <h5>Plan Premium</h5>
+          <div class="panel-name">Complete Lab Panel</div>
+          <p>Everything in Extended <span class="plus">+ vitamin D, urinalysis, thyroid profile, prostate profile.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH -->
+  <section class="tech">
+    <span class="section-tag">Clinical technology</span>
+    <h2 class="section-title">Real-time, 360° coordination</h2>
+    <p class="section-subtitle">Every Vitae membership runs on the same technology stack we use to manage more than 15,000 patients and operate as the home-care network for Panama's leading insurers.</p>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <div class="tech-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h5>Patient Monitoring Center</h5>
+        <p>24/7 clinical command center supervising every active patient, with early-alert protocols and continuous follow-up.</p>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h5>Digital Home Health Platform</h5>
+        <p>Centralized digital chart with full clinical record, lab results, visit history and care plan — accessible to the entire team.</p>
+      </div>
+      <div class="tech-item">
+        <div class="tech-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/></svg>
+        </div>
+        <h5>Clinic 360 App</h5>
+        <p>Mobile app used by physicians and nurses at every visit to capture vital signs, assessments and clinical evolution in real time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE LINES -->
+  <section class="lines">
+    <span class="section-tag">Beyond primary care</span>
+    <h2 class="section-title">Five integrated service lines, one trusted team</h2>
+    <p class="section-subtitle">Your membership is the primary-care layer. Behind it stands the full operational capacity of Vitae — so if anything escalates, the same clinical team handles it without you having to find another provider.</p>
+
+    <div class="lines-grid">
+      <div class="line-card featured">
+        <div class="line-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span class="tag">Your plan</span>
+        <h5>Vitae Memberships</h5>
+        <p>Primary care monitoring with home physician and nursing visits, lab panels and clinical coordination.</p>
+      </div>
+      <div class="line-card">
+        <div class="line-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <span class="tag">Urgent care</span>
+        <h5>Vitae GO!</h5>
+        <p>At-home urgent medical care for acute situations needing immediate assessment, stabilization and bedside management.</p>
+        <span class="rate">Member rate</span>
+      </div>
+      <div class="line-card">
+        <div class="line-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <span class="tag">Hospital at home</span>
+        <h5>Vitae Care</h5>
+        <p>Hospital-at-home services for postoperative patients, recovery, IV therapy and complex acute conditions.</p>
+        <span class="rate">Member rate</span>
+      </div>
+      <div class="line-card">
+        <div class="line-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <span class="tag">End-of-life</span>
+        <h5>Vitae Special Care</h5>
+        <p>Palliative care at home: pain management, symptom control, psychological support, and family accompaniment.</p>
+        <span class="rate">Member rate</span>
+      </div>
+      <div class="line-card">
+        <div class="line-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+        <span class="tag">Senior care</span>
+        <h5>Vitae Assist</h5>
+        <p>Trained technicians and caregivers for seniors needing daily living support, mobility assistance and companion care.</p>
+        <span class="rate">Member rate</span>
+      </div>
+    </div>
+
+    <div class="escalation-flow">
+      <h4>Member benefits across every Vitae service line</h4>
+      <p>Your membership unlocks <strong>special member rates and priority response</strong> across Vitae GO!, Vitae Care, Vitae Special Care, and Vitae Assist. If your condition changes, decompensates or requires hospital-level care, our team activates the right service line directly from your home — same trusted team, no handoffs, member pricing applied automatically.</p>
+    </div>
+  </section>
+
+  <!-- INSURANCE -->
+  <section class="insurance">
+    <div class="insurance-content">
+      <div class="insurance-text">
+        <h4>Trusted by Panama's top insurers</h4>
+        <p>Vitae operates as the home-care network for more than 28 international insurance companies. While these memberships are direct-pay, you can submit visits and labs for reimbursement to your own carrier.</p>
+      </div>
+      <div class="insurance-list">
+        <span class="ins-tag">PALIG</span>
+        <span class="ins-tag">MAPFRE</span>
+        <span class="ins-tag">BUPA</span>
+        <span class="ins-tag">VUMI</span>
+        <span class="ins-tag">AXA</span>
+        <span class="ins-tag more">+28 more carriers</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="value">
+    <span class="section-tag">Why it makes sense</span>
+    <h2 class="section-title">What you gain with a Vitae membership</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="big">2 hrs</div>
+        <h5>of driving avoided</h5>
+        <p>No more two-hour trips to Panama City for primary care appointments.</p>
+      </div>
+      <div class="value-card">
+        <div class="big">98% NPS</div>
+        <h5>real patient satisfaction</h5>
+        <p>The same clinical team already trusted by 15,000+ patients with measurable outcomes.</p>
+      </div>
+      <div class="value-card">
+        <div class="big">100%</div>
+        <h5>bilingual coordination</h5>
+        <p>Clinical communication in English — no nuance lost when describing your symptoms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <div class="footer-left">
+      <h3>Ready when you are</h3>
+      <p>Schedule a no-obligation welcome call to find the right plan for you.</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-contact">
+        <a><span>WhatsApp:</span> +507 6569-1219</a>
+        <a><span>Email:</span> info@vitae-health.com</a>
+        <a><span>Instagram:</span> @vitaepty</a>
+      </div>
+    </div>
+  </section>
+  <div class="footer-disclaimer">
+    Vitae Health Services · Your home health partner · Coverage: Coronado · Gorgona · Punta Barco · San Carlos · Farallón · Río Hato
+  </div>
+
+</div>
+</body>
+</html>
